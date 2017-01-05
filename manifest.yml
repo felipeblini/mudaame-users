@@ -1,0 +1,4 @@
+---
+applications:
+- name: Mudaame-users
+  command: node app/server.js

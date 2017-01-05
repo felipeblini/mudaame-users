@@ -1,0 +1,326 @@
+{
+    "id": "3dc2c827-a8df-45aa-9f11-fc63a4e2fe95",
+    "name": "Mudaame-users",
+    "description": "Postman's collection for Mudaame-users",
+    "order": [
+        "daca8493-655b-9393-b70c-17c12d4ab855"
+    ],
+    "folders": [
+    
+        {
+            "id": "a0553349-c1f9-410b-8ea2-57aa527d2e81",
+            "name": "Diagnostic",
+            "description": "Diagnostic operations.",
+            "order": [
+                
+                "6d068169-88eb-4076-8625-a7f6e2c39791",                
+                "27f6da7f-e564-4527-b8af-35cdc86db555"                
+            ],
+            "owner": 0
+        },    
+        {
+            "id": "43f98eb4-c617-4f25-a695-62add03db1bf",
+            "name": "User",
+            "description": "Collection for resource User",
+            "order": [
+                
+                "b471e4c5-03eb-4cf0-916f-9aee0b3099dd",                
+                "7409d51e-201c-48e4-b8b3-628993cbae4d",                
+                "765ae65b-a98a-4ed6-beec-2db0019158b8",                
+                "64aa8cd4-bb12-4429-93e0-a29514e092a2"                
+            ],
+            "owner": 0
+        },    
+        {
+            "id": "749581aa-3dba-43e6-936d-a774e15d174d",
+            "name": "Profile",
+            "description": "Collection for resource Profile",
+            "order": [
+                
+                "4d0e2193-7671-483d-88c7-ec65f51faa0a",                
+                "49f951a2-2eec-41ff-b4da-ef2dbeb07a26",                
+                "fb8137a4-ea2e-4f50-a504-9f946ea47f5c",                
+                "6b952c68-891b-4394-a663-1d5ae27ac1e3"                
+            ],
+            "owner": 0
+        }    
+    ],
+    "timestamp": 1483584694035,
+    "owner": 0,
+    "remoteLink": "",
+    "public": false,
+    "requests": [
+                
+    {
+            "id": "d8fb79dc-f8c7-4b5e-98bf-945dbc054a2a",
+            "headers": "Authorization: Basic aWNpbmV0aWM6YWRtaW4=\n",
+            "url": "http://{{host}}:{{port}}/api/swagger.json",
+            "preRequestScript": "",
+            "pathVariables": {},
+            "method": "GET",
+            "data": [],
+            "dataMode": "params",
+            "version": 2,
+            "tests": "",
+            "currentHelper": "basicAuth",
+            "helperAttributes": {
+				"username": "{{user}}",
+				"password": "{{pass}}",
+				"saveToRequest": true
+			},
+            "time": 1483584694035,
+            "name": "API Doc: Swagger 2.0",
+            "description": "Swagger 2.0 API Documentation",
+            "descriptionFormat": "",
+            "collectionId": "3dc2c827-a8df-45aa-9f11-fc63a4e2fe95",
+            "responses": [],
+            "rawModeData": ""
+        },                
+    {
+            "id": "6d068169-88eb-4076-8625-a7f6e2c39791",
+            "headers": "",
+            "url": "http://{{host}}:{{port}}/ping",
+            "preRequestScript": "",
+            "pathVariables": {},
+            "method": "GET",
+            "data": [],
+            "dataMode": "params",
+            "version": 2,
+            "tests": "",
+            "currentHelper": "normal",
+            "helperAttributes": {},
+            "time": 1483584694035,
+            "name": "Ping Service",
+            "description": "The Ping service allows to check if the service is up and running.\nIn production systems it can be used by Load Balancers to check if the current node is working.\nNo auth credentials are needed to call this service.\nA successfull response for a ping call is: `200 OK { \"msg\": \"pong\" }`",
+            "descriptionFormat": "html",
+            "collectionId": "3dc2c827-a8df-45aa-9f11-fc63a4e2fe95",
+            "responses": [],
+            "rawModeData": ""
+        },                
+    {
+            "id": "27f6da7f-e564-4527-b8af-35cdc86db555",
+            "headers": "Accept: application/json\nContent-Type: application/json\nAuthorization: Basic aWNpbmV0aWM6YWRtaW4=\n",
+            "url": "http://{{host}}:{{port}}/api/status",
+            "preRequestScript": "",
+            "pathVariables": {},
+            "method": "GET",
+            "data": [],
+            "dataMode": "params",
+            "version": 2,
+            "tests": "",
+            "currentHelper": "basicAuth",
+            "helperAttributes": {
+				"username": "{{user}}",
+				"password": "{{pass}}",
+				"saveToRequest": true
+			},
+            "time": 1483584694035,
+            "name": "Status Service",
+            "description": "The Status service provides information and versions of the running backend. This method requires authentication.",
+            "descriptionFormat": "html",
+            "collectionId": "3dc2c827-a8df-45aa-9f11-fc63a4e2fe95",
+            "responses": [],
+            "rawModeData": ""
+        },                
+    {
+            "id": "b471e4c5-03eb-4cf0-916f-9aee0b3099dd",
+            "headers": "Accept: application/json\nContent-Type: application/json\nAuthorization: Basic aWNpbmV0aWM6YWRtaW4=\n",
+            "url": "http://{{host}}:{{port}}/api/users?limit=10",
+            "preRequestScript": "",
+            "pathVariables": {},
+            "method": "GET",
+            "data": [],
+            "dataMode": "params",
+            "version": 2,
+            "tests": "",
+            "currentHelper": "basicAuth",
+            "helperAttributes": {
+				"username": "{{user}}",
+				"password": "{{pass}}",
+				"saveToRequest": true
+			},
+            "time": 1483584694050,
+            "name": "Query User",
+            "description": "Query User. Query syntax follows the BaucisJS conventions, see: https://github.com/wprl/baucis/wiki/Query-String-Parameters",
+            "descriptionFormat": "html",
+            "collectionId": "3dc2c827-a8df-45aa-9f11-fc63a4e2fe95",
+            "responses": [],
+            "rawModeData": ""
+        },                
+    {
+            "id": "7409d51e-201c-48e4-b8b3-628993cbae4d",
+            "headers": "Accept: application/json\nContent-Type: application/json\nAuthorization: Basic aWNpbmV0aWM6YWRtaW4=\n",
+            "url": "http://{{host}}:{{port}}/api/users",
+            "preRequestScript": "",
+            "pathVariables": {},
+            "method": "POST",
+            "data": [],
+            "dataMode": "raw",
+            "version": 2,
+            "tests": "",
+            "currentHelper": "basicAuth",
+            "helperAttributes": {
+				"username": "{{user}}",
+				"password": "{{pass}}",
+				"saveToRequest": true
+			},
+            "time": 1483584694050,
+            "name": "Create User",
+            "description": "Creates a new User.",
+            "descriptionFormat": "html",
+            "collectionId": "3dc2c827-a8df-45aa-9f11-fc63a4e2fe95",
+            "responses": [],
+            "rawModeData": "{\n    \"name\" : \"new_Name\",\n    \"age\" : 3,\n    \"isActive\" : true,\n    \"picture\" : null,\n    \"location\" : { \"type\" : \"Point\", \"coordinates\" : [139.71, 35.65] }\n}"
+        },                
+    {
+            "id": "765ae65b-a98a-4ed6-beec-2db0019158b8",
+            "headers": "Accept: application/json\nContent-Type: application/json\nAuthorization: Basic aWNpbmV0aWM6YWRtaW4=\n",
+            "url": "http://{{host}}:{{port}}/api/users/{{id}}",
+            "preRequestScript": "",
+            "pathVariables": {},
+            "method": "PUT",
+            "data": [],
+            "dataMode": "raw",
+            "version": 2,
+            "tests": "",
+            "currentHelper": "basicAuth",
+            "helperAttributes": {
+				"username": "{{user}}",
+				"password": "{{pass}}",
+				"saveToRequest": true
+			},
+            "time": 1483584694050,
+            "name": "Update User",
+            "description": "Updates the User with id: `{{id}}`.",
+            "descriptionFormat": "html",
+            "collectionId": "3dc2c827-a8df-45aa-9f11-fc63a4e2fe95",
+            "responses": [],
+            "rawModeData": "{\n    \"name\" : \"updated_Name\",\n    \"age\" : 3,\n    \"isActive\" : true,\n    \"picture\" : null,\n    \"location\" : { \"type\" : \"Point\", \"coordinates\" : [139.71, 35.65] }\n}"
+        },                
+    {
+            "id": "64aa8cd4-bb12-4429-93e0-a29514e092a2",
+            "headers": "Accept: application/json\nContent-Type: application/json\nAuthorization: Basic aWNpbmV0aWM6YWRtaW4=\n",
+            "url": "http://{{host}}:{{port}}/api/users/{{id}}",
+            "preRequestScript": "",
+            "pathVariables": {},
+            "method": "DELETE",
+            "data": [],
+            "dataMode": "raw",
+            "version": 2,
+            "tests": "",
+            "currentHelper": "basicAuth",
+            "helperAttributes": {
+				"username": "{{user}}",
+				"password": "{{pass}}",
+				"saveToRequest": true
+			},
+            "time": 1483584694066,
+            "name": "Delete User",
+            "description": "Deletes the User with id: `{{id}}`.",
+            "descriptionFormat": "html",
+            "collectionId": "3dc2c827-a8df-45aa-9f11-fc63a4e2fe95",
+            "responses": [],
+            "rawModeData": ""
+        },                
+    {
+            "id": "4d0e2193-7671-483d-88c7-ec65f51faa0a",
+            "headers": "Accept: application/json\nContent-Type: application/json\nAuthorization: Basic aWNpbmV0aWM6YWRtaW4=\n",
+            "url": "http://{{host}}:{{port}}/api/profiles?limit=10",
+            "preRequestScript": "",
+            "pathVariables": {},
+            "method": "GET",
+            "data": [],
+            "dataMode": "params",
+            "version": 2,
+            "tests": "",
+            "currentHelper": "basicAuth",
+            "helperAttributes": {
+				"username": "{{user}}",
+				"password": "{{pass}}",
+				"saveToRequest": true
+			},
+            "time": 1483584694066,
+            "name": "Query Profile",
+            "description": "Query Profile. Query syntax follows the BaucisJS conventions, see: https://github.com/wprl/baucis/wiki/Query-String-Parameters",
+            "descriptionFormat": "html",
+            "collectionId": "3dc2c827-a8df-45aa-9f11-fc63a4e2fe95",
+            "responses": [],
+            "rawModeData": ""
+        },                
+    {
+            "id": "49f951a2-2eec-41ff-b4da-ef2dbeb07a26",
+            "headers": "Accept: application/json\nContent-Type: application/json\nAuthorization: Basic aWNpbmV0aWM6YWRtaW4=\n",
+            "url": "http://{{host}}:{{port}}/api/profiles",
+            "preRequestScript": "",
+            "pathVariables": {},
+            "method": "POST",
+            "data": [],
+            "dataMode": "raw",
+            "version": 2,
+            "tests": "",
+            "currentHelper": "basicAuth",
+            "helperAttributes": {
+				"username": "{{user}}",
+				"password": "{{pass}}",
+				"saveToRequest": true
+			},
+            "time": 1483584694066,
+            "name": "Create Profile",
+            "description": "Creates a new Profile.",
+            "descriptionFormat": "html",
+            "collectionId": "3dc2c827-a8df-45aa-9f11-fc63a4e2fe95",
+            "responses": [],
+            "rawModeData": "{\n    \"description\" : \"new_Description\"\n}"
+        },                
+    {
+            "id": "fb8137a4-ea2e-4f50-a504-9f946ea47f5c",
+            "headers": "Accept: application/json\nContent-Type: application/json\nAuthorization: Basic aWNpbmV0aWM6YWRtaW4=\n",
+            "url": "http://{{host}}:{{port}}/api/profiles/{{id}}",
+            "preRequestScript": "",
+            "pathVariables": {},
+            "method": "PUT",
+            "data": [],
+            "dataMode": "raw",
+            "version": 2,
+            "tests": "",
+            "currentHelper": "basicAuth",
+            "helperAttributes": {
+				"username": "{{user}}",
+				"password": "{{pass}}",
+				"saveToRequest": true
+			},
+            "time": 1483584694066,
+            "name": "Update Profile",
+            "description": "Updates the Profile with id: `{{id}}`.",
+            "descriptionFormat": "html",
+            "collectionId": "3dc2c827-a8df-45aa-9f11-fc63a4e2fe95",
+            "responses": [],
+            "rawModeData": "{\n    \"description\" : \"updated_Description\"\n}"
+        },                
+    {
+            "id": "6b952c68-891b-4394-a663-1d5ae27ac1e3",
+            "headers": "Accept: application/json\nContent-Type: application/json\nAuthorization: Basic aWNpbmV0aWM6YWRtaW4=\n",
+            "url": "http://{{host}}:{{port}}/api/profiles/{{id}}",
+            "preRequestScript": "",
+            "pathVariables": {},
+            "method": "DELETE",
+            "data": [],
+            "dataMode": "raw",
+            "version": 2,
+            "tests": "",
+            "currentHelper": "basicAuth",
+            "helperAttributes": {
+				"username": "{{user}}",
+				"password": "{{pass}}",
+				"saveToRequest": true
+			},
+            "time": 1483584694066,
+            "name": "Delete Profile",
+            "description": "Deletes the Profile with id: `{{id}}`.",
+            "descriptionFormat": "html",
+            "collectionId": "3dc2c827-a8df-45aa-9f11-fc63a4e2fe95",
+            "responses": [],
+            "rawModeData": ""
+        }                 
+    ]    
+}
